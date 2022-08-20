@@ -1,0 +1,116 @@
+.header-navigation{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 1rem 0;
+  align-items: center;
+  margin-bottom: 12rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+  &__logo-container{
+    & > ul{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      & li{
+        align-items: center;
+
+      }
+      .logo-text{
+        margin-left: 1.27rem;
+        align-self: center;
+        color: #1F2421;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+      .logo-icon{
+        // height: 40px;
+        align-self: center;
+        & img{
+          width: 100%;
+        }
+      }
+      .logo-icon, .logo-text{
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__nav-list{
+    & > ul{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
+      & li {
+        margin-left: 2.4rem;
+        font-family: Overpass;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        letter-spacing: 0.05em;
+        // padding: 5px 10px;
+        color: #1F2421;
+        cursor: pointer;
+        &:hover{
+           &:not(:last-child){
+            color: rgba(0, 114, 153, 0.7);
+          } 
+        }
+        a{
+          text-decoration: none;
+          font-weight: 600;
+          font-family: Overpass;
+          line-height: 2.1rem;
+          // &:active{
+          //    font-weight: 600;
+          //    color: rgba(0, 114, 153, 0.7) !important;
+          // }
+          &:hover{
+            color: rgba(0, 114, 153, 0.7);
+          }
+        }
+      }
+      .nav-list-donate-btn{
+        padding: 0.5rem 2.4rem;
+        background: #F18F01;
+        border-radius: 5rem;
+        color: white;
+        &:hover{
+          filter: brightness(90%);
+        }
+      }
+    }
+    @media only screen and (max-width:809px){
+      display: none;
+    }
+    // @media only screen and (max-width:768px){
+    //   display: none;
+    // }
+  }
+}
+
+.drawer-btn{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+  margin-top: -2.5rem;
+
+  @media only screen and (max-width:809px){
+    display: flex;
+  }
+}
+
+.active-link{
+  color: rgba(0, 114, 153, 0.7) !important;
+}
